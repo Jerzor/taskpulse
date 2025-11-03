@@ -6,6 +6,7 @@ import { BullModule } from '@nestjs/bullmq';
 import { PrismaModule } from './prisma/prisma.module.js';
 import { UserModule } from './user/user.module.js';
 import { AuthModule } from './auth/auth.module.js';
+import { TaskModule } from './task/task.module.js';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { AuthModule } from './auth/auth.module.js';
     PrismaModule,
     UserModule,
     AuthModule,
+    TaskModule,
   ],
 })
 export class AppModule {}

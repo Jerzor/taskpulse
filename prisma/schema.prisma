@@ -13,4 +13,23 @@ model User {
   email     String   @unique
   password  String
   createdAt DateTime @default(now())
+  Task      Task[]
+}
+
+enum TaskStatus {
+  PENDING
+  IN_PROGRESS
+  DONE
+  FAILED
+}
+
+model Task {
+  id          String     @id @default(uuid())
+  title       String
+  description String?
+  status      TaskStatus @default(PENDING)
+  userId      String
+  user        User       @relation(fields: [userId], references: [id])
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
 }
