@@ -7,6 +7,10 @@ import { PrismaModule } from './prisma/prisma.module.js';
 import { UserModule } from './user/user.module.js';
 import { AuthModule } from './auth/auth.module.js';
 import { TaskModule } from './task/task.module.js';
+import { JobsModule } from './jobs/jobs.module.js';
+import { SchedulerModule } from './scheduler/scheduler.module.js';
+import { EventsModule } from './events/events.module.js';
+import { LoggerModule } from './logger/logger.module.js';
 
 @Module({
   imports: [
@@ -23,6 +27,10 @@ import { TaskModule } from './task/task.module.js';
     UserModule,
     AuthModule,
     TaskModule,
+    JobsModule,
+    SchedulerModule,
+    EventsModule,
+    LoggerModule,
   ],
 })
 export class AppModule {}
